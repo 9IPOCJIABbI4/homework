@@ -34,12 +34,62 @@
 	\label{eq:2}
 .\end{equation}
 \end{dfn}
+
+Группа вещественных ортогональных матриц $O(n)$ и  соответствующее
+многообразие, вложенное в
+$\R^{n^2}$, задаётся системой уравнений (\ref{eq:2}).
+Поскольку матрицы $O \cdot O^T$ и $I_n$ --- симметричны, то число
+независимых уравнений, определяющих многообразие $O (n)$, равно $n(n+1) /2$.
+Отсюда следует, что многообразие группы $O(n)$ имеет размерность
+\begin{equation}
+	\dim (O(n)) = n^2 - n (n+1) /2=n(n-1) /2 = \dim (SO(n))	
+	\label{eq:on}
+.\end{equation}
+Последнее равенство вытекает из того факта, что многообразие группы $O(n)$ 
+состоит из двух несвязанных частей одинаковой размерности, одна из которых
+представляет собой многообразие $SO(n)=)_+(n)$ (множество ортогональных матриц
+$O$ с условием $\det (O)=1$, а вторая часть $O_-(n)$) (множество ортогональных
+матриц $O$ с условием $\det (O)=-1$) состоит из элементов смежного класса
+$R \cdot SO(n)$, где $R$ любой фиксированный элемент из $O_-(n)$.
 \subsection{$SO(n,\, \CC )$ }
 \begin{dfn}
 	\emph{Специальной ортогональной группой $SO(n,\,\CC)$} называется
 	подгруппа комплексных ортогональных
 матриц, удовлетворяющих (\ref{eq:2}), и таких, что $\det (O)=+1$.
 \end{dfn}
+Это группа Ли размерности (\ref{eq:on}) как подгруппа $O(n)$.
+Алгебра Ли группы $SO(2)$ --- $so(2)$. Рассмотрим кривую $O_\phi$ около
+единичного элемента (для малых углов  $\phi$)
+\begin{equation}
+	O_\phi = I_2 +\phi \mathbf{i}+ O(\phi^2), \quad \mathbf{i}=
+	\begin{pmatrix} 0 & -1 \\
+	1 & 0 \end{pmatrix} 
+.\end{equation}
+Сравнивая кривую $g(t) = O_\phi \mid _{\phi=at}$ ($t$ --- мало и $a \in  \R$ с
+выражением, связывающим элементы алгебры и группы Ли в малой окрестности
+\begin{equation}
+	g\left( t \right) = I_n +t A + O (t^2)
+,\end{equation}
+мы заключаем что алгебра Ли $so(2)$ состоит из антисимметричных двумерных
+матриц $a \mathbf{i}$, которые образуют одномерное векторное пространство.
+Отметим, что любой элемент $O_\phi$ группы $SO(2)$ можно представить в виде
+линейной комбинации матриц $I_2$ и $\mathbf{i}$ 
+ \begin{equation}
+	\begin{pmatrix} 
+	\cos \phi & - \sin \phi \\
+\sin \phi & \cos \phi \end{pmatrix} =
+I_2 \cos \phi +\mathbf{i} \sin \phi
+\label{eq:3215}
+.\end{equation}
+Имеет место следующее тождество (операторный аналог формулы Эйлера):
+\begin{equation}
+	\exp \left(\hat{\mathbf{i}} \phi\right)= I \cos \phi + \hat{\mathbf{i}}
+	\sin\phi, \quad \phi \in \R \text{ или } \CC
+	.\label{eq:euler}
+\end{equation}
+Из формулы (\ref{eq:euler}) следует, что любой элемент $O_\phi \in SO(2)$,
+заданный в (\ref{eq:3215}), представляется в виде $O_\phi= \exp (\mathbf{i} \phi$,
+то есть в виде экспоненты от элемента $(\mathbf{i}\phi)$ алгебры Ли $so(2)$
 \subsection{$Sp(2r,\, \R)$ }
 \begin{dfn}
 	\emph{Симплектической группой $Sp(2r,\, \R)$ } называется группа
@@ -52,6 +102,47 @@
 	.\end{equation}
 
 \end{dfn}
+Алгебра Ли $sp(2r,\R$ группы $Sp(2r,\,\R)$. Для симплектических матриц близких к
+единице имеем
+\begin{equation}
+	J=(I_{2r} +t A^T + O(n^2)) \cdot J \cdot (I_{2r} +t A + O(t^2))=
+	J+t(A^T \cdot J + J \cdot A) + O(t^2)
+,\end{equation}
+то есть
+\begin{equation}
+	A^T \cdot J + J \cdot A =0
+,\end{equation}
+где антисимметричная матрица $J$ задана в (\ref{eq:3}). Таким образом,
+$sp(2r,\,\R)$ --- это множество матриц, удовлетворяющих условию
+\begin{equation}
+	A^T \begin{pmatrix} 
+0 & I_r \\
+-I_r & 0
+\end{pmatrix}
++
+\begin{pmatrix} 
+0 & I_r \\
+-I_r & 0\end{pmatrix} A = 0
+\label{eq:3226}
+.\end{equation}
+Матрицу $A$ можно представить в блочном виде
+\begin{equation}
+	A =
+	\begin{pmatrix} 
+	X & Y \\
+Z & W\end{pmatrix} 
+\label{eq:a}
+,\end{equation}
+где $X,\,Y,\,Z,\,W$ --- матрицы $r \times r$ с элементами из $\R$, которые в
+силу условия (\ref{eq:3226}) удовлетворяют соотношениям
+ \begin{equation}
+	Y^T = Y, \qquad Z^T = Z, \qquad X^T = - W
+.\end{equation}
+Вещественная размерность пространства $sp(2r,\, \R)$ равна
+\begin{equation}
+	\dim (sp(2r,\,\R))= r (2r +1)
+.\end{equation}
+Если $A \in sp(2r,\R)$, то $\exp (A) \in  Sp(2r,\,\R)$.
 \subsection{$Sp(p,\, q)$ }
 \begin{dfn}
 	\emph{ Группой $Sp(p,\,q)$}, где $p+q=r$, называется группа
@@ -67,11 +158,42 @@ I_{p,\,q} & 0\\
 	\end{equation}
 	и нестандартному условию симплектичности
 	\begin{equation}
-		T^T \cdot \begin{pmatrix} 0 & I_{p,\,q} \\ -I_{p,\,q} & 0 \end{pmatrix} 
-		\cdot T= \begin{pmatrix} 0 & I_{p,\,q} \\ -I_{p,\,q} & 0 \end{pmatrix} 
+		T^T \cdot \begin{pmatrix} 0 & I_{p,\,q} \\ -I_{p,\,q} & 0
+		\end{pmatrix} 
+		\cdot T= \begin{pmatrix} 0 & I_{p,\,q} \\ -I_{p,\,q} & 0
+		\end{pmatrix} 
 	.\end{equation}
 \end{dfn}
-
+Алгебры Ли $sp(p,\,q)$. Рассматривая элементы группы $Sp(p,\,q)$, близкие к 
+единичным, получаем, что алгебра Ли $sp(p,\,q)$ --- это множество $2r \times 2r$ 
+(здесь $r = p +  q$) комплексных матриц $A$, удовлетворяющих соотношениям
+ \begin{equation}
+	 A^T \begin{pmatrix} 0 & I_r \\ -I_r & 0\end{pmatrix} =
+	 \begin{pmatrix} 0 & -I_r \\ I_r & 0 \end{pmatrix} A,
+	 \quad A^\dag \begin{pmatrix} I_{p,\,q} & 0 \\ 0 & I_{p,\,q} \end{pmatrix}
+	 = - \begin{pmatrix} I_{p,\,q} & 0 \\ 0 & I_{p,\,q} \end{pmatrix} 
+	 \label{eq:sp}
+.\end{equation}
+Представим $A$ в виде блочной матрицы (\ref{eq:a}), где $X,\,Y,\,Z,\,W$ ---
+комплексные $r \times r$ блоки. Из соотношений (\ref{eq:sp}) следуют условия
+ \begin{align}
+	 W = - X^T,&\qquad Z=-I_{p,\,q} \cdot Y^\dag \cdot I_{p,\,q},\\
+	 Y^T = Y,&\qquad X^\dag = - I_{p,\,q} \cdot X \cdot I_{p,\,q},
+	 \label{eq:3234}
+\end{align}
+и любой элемент $A \in sp(p,\,q)$ представляется в виде блочной матрицы
+\begin{equation}
+	A= \begin{pmatrix} 
+	X & Y \\ -I_{p,\,q} \cdot Y^\dag \cdot I_{p,\,q} & - X^T \end{pmatrix} 
+,\end{equation}
+где две $r \times r$ матрицы $X$ и $Y$, удовлетворяют соотношениям обобщённой
+антиэрмитовости и симметричности (\ref{eq:3234}). Пространства
+таких матриц $X $ и $Y$  имеют вещественные размерности $r^2$ и $(r+1)r$,
+соответственно. Поэтому
+\begin{equation}
+	\dim (sp(p,\,r-p))=(r+1)r + r^2= r(2r +1)
+	\label{eq:3236}
+.\end{equation}
 \subsection{$USp(2r)$ }
 \begin{dfn}
 	\emph{Унитарной симлектической группой $USP(2r)$} называется
@@ -79,6 +201,40 @@ I_{p,\,q} & 0\\
 	симплектичности  (\ref{eq:3}), так и условию унитарности $T^\dag \cdot
 	T=I_n$.
 \end{dfn}
+Алгебра Ли $usp(2r)$ группы $USp(2r)$. Для унитарных симплектических
+$(2r \times 2r$ матриц, близких к единичной, кроме соотношения унитарности
+\begin{equation}
+	I_n = U U^\dag = (I_n + t A + O(t^2))(I_n+t A^\dag + O(t^2))= I_n+
+	t(A +A^\dag) + O(t^2)
+,\end{equation}
+откуда
+\begin{equation}
+	A^\dag = A
+	\label{eq:uni}
+,\end{equation}
+имеем ещё условие симплектичности. Поэтому алгебра Ли $usp(2r)$ --- это
+множество всех комплексных матриц $A$, одновременно удовлетворяющих
+соотношениям (\ref{eq:uni}) и (\ref{eq:3226}), которые можно записать в виде
+(\ref{eq:sp}), где вместо матрицы $I_{p,\,q}$ необходимо взять единичную
+матрицу $I_r$. Таким образом, $usp(2r)=sp(r,\,0)=sp(0,\,r)$. Теперь мы можем
+воспользоваться результатами предыдущего пункта и получить для произвольного
+элемента $A \in  usp(2r)$ представление в виде блочной матрицы
+ \begin{equation}
+	 A = \begin{pmatrix}  X & Y \\ -Y^\dag & -X^T \end{pmatrix} 
+	 \label{eq:3237}
+,\end{equation}
+где $X$ и $Y$ --- комплексные $r \times r$ матрицы, удовлетворяющие условиям
+\begin{equation}
+	Y^T=Y, \qquad X^\dag=-X
+	\label{eq:3238}
+.\end{equation}
+Легко проверить, что множество матриц $usp(2r)$ (\ref{eq:3237}),
+(\ref{eq:3238}) образует векторное пространство, замкнутое относительно
+операции коммутирования. Размерность этого пространства равна
+\begin{equation}
+	\dim (usp(2r))=r(2r+1),
+\end{equation} 
+что следует из (\ref{eq:3236}).
 \subsection{$O(p, q)$ }
 \begin{dfn}
 	\emph{Вещественной псевдо-ортогонально группой $O(p,\,q)$} называется
@@ -156,20 +312,6 @@ $\mathcal{O}_{I_n} \equiv O(n,\,\CC)$
 	фактор-группа $SU(p,\,q) / \mathbf{Z}_n$, где  $p+q=n$.
 \end{dfn}
 \subsection{$\mathcal{O}_{J}$ }
-$\mathcal{O}_{J} \equiv Sp(2r,\, \CC)$
-\subsection{Группа Пуанкаре}
-\begin{dfn}
-	\emph{Группой Пункаре} называется группа симметрий четырёхмерного
-	пространства Минковского, т.е. множество преобразований вида
-	\begin{equation}
-		x_k \to x'_k = O_{kj}x_j+a_k
-	,\end{equation}
-	где вещественная матрица $\|O_{ij}\| \in O(1,\,3)$ и произведение
-	элементов задаётся следующим образом
-	\begin{equation}
-		g_1 \cdot g_2 = (O_1, \vec{a}_1) \cdot  (O_2, \vec{a}_2) =
-		(O_1 \cdot O_2,\, O_1 \cdot \vec{a}_2 + \vec{a}_1)
-	.\end{equation}
-\end{dfn}
+$\mathcal{O}_{J} \equiv Sp(2r,\, \CC)$ 
 \end{document} % конец документа
 
